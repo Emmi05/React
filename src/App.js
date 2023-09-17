@@ -11,12 +11,16 @@ import  Footer from './Componentes/Footer';
 
 
 function App() {
+  //el state es de HOOK gg de components >extension google 
   const [mostrarFormulario, actualizarMostrar] = useState(false)
+  //es un arreglo pero se va vacio para que no tire error en .map  
   const [colaboradores, actualizarColaboradores] = useState([{
-    equipo: "Front End",
+
+  /* PERO tambien puedo poner datos mios para que se mueste pero lo comente XD
+     equipo: "Front End",
     foto: "https://github.com/harlandlohora.png",
     nombre: "Harland Lohora",
-    puesto: "Instructor"
+    puesto: "Instructor" */
   }])
   //Ternario --> condicion ? seMuestra : noSeMuestra
   // condicion && seMuestra
@@ -25,11 +29,11 @@ function App() {
     actualizarMostrar(!mostrarFormulario)
   }
 
-  //Registrar colaborador
+  //Registrar colaborador lo envio a COMPONENTE FORMULARIO 
 
   const registrarColaborador = (colaborador) => {
     console.log("Nuevo colaborador", colaborador)
-    //Spread operator
+    //Spread operator ...copia los valores del array y despues le pone el valor o colaborardpr el array?
     actualizarColaboradores([...colaboradores, colaborador])
   }
 
@@ -89,6 +93,8 @@ function App() {
         equipos.map((equipo) => <Equipo
           datos={equipo}
           key={equipo.titulo}
+          //filtra el ARREGLO QUE EXISTE ARRIba con que el colaborador este el equipo que permance
+          //colaborador en el equipo, para que no se muestren los que estan vaciós se va a equipo
           colaboradores={colaboradores.filter(colaborador => colaborador.equipo === equipo.titulo)}
         />
         )

@@ -13,6 +13,7 @@ const Formulario = (props) => {
 
     const { registrarColaborador } = props
 
+    //de aqui saco los datos para el colaborador, se envia a equipo
     const manejarEnvio = (e) => {
         e.preventDefault()
         console.log("Manejar el envio")
@@ -22,6 +23,7 @@ const Formulario = (props) => {
             foto,
             equipo
         }
+        //lo recibo desde APP
         registrarColaborador(datosAEnviar)
     }
 
@@ -52,6 +54,7 @@ const Formulario = (props) => {
             <ListaOpciones
                 valor={equipo}
                 actualizarEquipo={actualizarEquipo}
+                // aqui agarra los equipos del arreglo de APP y que estan en el componente de ListaOpciones
                 equipos={props.equipos}
             />
             <Boton>

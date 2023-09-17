@@ -1,6 +1,7 @@
 import "./Footer.css"
 
 const Footer = () => {
+    //se pone la imagen de footer aqui porque si se pone en css no agarra porque es JSX
     return <footer className='footer' style={{ backgroundImage: "url(/img/footer.png)" }}>
         <div className='redes'>
             <a href='https://www.aluracursos.com/'>
