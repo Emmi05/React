@@ -1,0 +1,13 @@
+Para crear un proyecto:
+npx create-next-app Ejemplo
+
+ejecutar en localhost
+npm start
+
+Poner codigo en Visual Studio Code
+code .
+
+
+Si tira algun error, es por el JSON :c
+POSIBLES SOLUCIONESSS PQ no me acuerdo cual use fufu
+npm install --no-optional
